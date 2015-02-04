@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">OnAir</string>
+  <string name="some_text">
+    List of Users
+  </string>
+  <string name="some_hint">
+    Type here to filter&#8230;
+  </string>
+  
+	<string name="baseUrl">https://intc-premise.brivo.net</string>
+    
+     <string name="some_hint">
+    Type here to filter&#8230;
+  </string>
+<string name="baseUrl">https://intc-premise.brivo.net</string>
+<string name="authorizerUrl">https://intc-premise.brivo.net/api/authenticate</string>
+
+</resources>

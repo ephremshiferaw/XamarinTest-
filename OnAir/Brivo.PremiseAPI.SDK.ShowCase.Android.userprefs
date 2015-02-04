@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Brivo.PremiseAPI.SDK.ShowCase.Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_for_Nexus_5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Brivo.PremiseAPI.SDK.ShowCase.Android.csproj">
+    <Files>
+      <File FileName="UsersActivity.cs" Line="1" Column="1" />
+      <File FileName="Brivo.PremiseAPI.SDK.ShowCase.Android.csproj" Line="5" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Brivo.PremiseAPI.SDK.ShowCase.Android MonoForAntroid.PreferredDevice="Nexus 4" />
+</Properties>
