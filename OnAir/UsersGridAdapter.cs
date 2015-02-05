@@ -1,100 +1,70 @@
-﻿using System;
-using Android.Widget;
-using Android.Content;
-using Brivo.PremiseAPI.SDK.CSharp;
-using Refractored.Xam.Settings;
+﻿using System.Collections.Generic;
+using Android.App;
 using Android.Views;
-using System.Collections.Generic;
-using System.Net;
+using Android.Widget;
+using Brivo.PremiseAPI.SDK.CSharp;
+using Brivo.PremiseAPI.SDK.CSharp.Elements;
+using Activity = Android.App.Activity;
 
 namespace OnAir
 {
-	public class UsersGridAdapter: BaseAdapter<string> {
+    public class UsersGridAdapter : BaseAdapter<User>
+    {
 
+        private List<User> _items;
+        private readonly Activity _context;
 
-		List<User> items;
-	
-		Android.App.Activity context;
-		public UsersGridAdapter( Android.App.Activity context) : base() {
-			this.context = context;
-			Init ();
-		}
-		public override long GetItemId(int position)
-		{
-			return items[position].id;
-		}
-		public override string this[int position] {
-            get { return items[position].ToString(); }
-		}
-		public override int Count {
-			get { return items.Count; }
-		}
-		public override View GetView(int position, View convertView, ViewGroup parent)
-		{
-            //View view = convertView; // re-use an existing view, if one is available
-            //if (view == null) // otherwise create a new one
-            //    view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItemSingleChoice, null);
-            //view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = items[position].ToString();
+        public UsersGridAdapter(Activity context, List<User> users)
+        {
+            _context = context;
+            _items = users;
 
+           
+        }
 
-            var item = items[position];
-            View view = convertView;
+        public override long GetItemId(int position)
+        {
+            return _items[position].id;
+        }
+
+        public override User this[int position]
+        {
+            get { return _items[position]; }
+        }
+
+        public override int Count
+        {
+            get { return _items.Count; }
+        }
+
+        public override View GetView(int position, View convertView, ViewGroup parent)
+        {
+            
+            var item = _items[position];
+            var view = convertView;
             if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.Users, null);
-            view.FindViewById<TextView>(Resource.Id.Text1).Text = item.name.familyName;
-            view.FindViewById<TextView>(Resource.Id.Text2).Text = item.name.givenName;
-           // view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(item.ImageResourceId);
+                view = _context.LayoutInflater.Inflate(Resource.Layout.User, null);
+			view.FindViewById<TextView>(Resource.Id.textView1).Text = getName(item);
+
+           
             return view;
 
-			
-		}
-	
 
-
-		private string _baseUrl;
-		private IAuthorize _authorizer;
-		private UserWrapper _wrapper;
-		private QueryParameters _queryParameters;
-
-
-
-		private void Init()
+        }
+		string getName(User user)
 		{
-
-            items = new List<User>();
-		    for (var i = 0; i < 10; i++)
-		    {
-		        items.Add(new User() {id=i, name = new Name(){familyName = "LastName " + "i", givenName = "FirstName" + "i"}});
-		    }
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
-            _baseUrl = this.context.GetString(Resource.String.baseUrl);
-            _authorizer = GetP8ApiAuthorizer();
-            _queryParameters = new QueryParameters(0, 1);
-            _wrapper = new UserWrapper(_authorizer, _baseUrl, _queryParameters);
-
-
-            items = _wrapper.GetUsers();
-
+			return string.Format("{0} {1}", user.name.givenName, user.name.familyName);
 		}
+     
+
+
+    }
 
 
 
-		private P8ApiBasedAuthorizer GetP8ApiAuthorizer()
-		{
-			return  new P8ApiBasedAuthorizer(
-				this.context.GetString(Resource.String.p8ApiBasedAuthorizerUrl),
-				this.context.GetString(Resource.String.actAsUserName),
-				this.context.GetString(Resource.String.applicationId),
-				this.context.GetString(Resource.String.signAlgorithm),
-				this.context.GetString(Resource.String.privateKey)		
-			);
 
 
-
-		}
-
-	}
 }
+
+
 

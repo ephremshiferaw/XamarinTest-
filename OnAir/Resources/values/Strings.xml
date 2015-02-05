@@ -2,38 +2,14 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">OnAir</string>
+  <string name="some_text">
+    List of Users
+  </string>
+  <string name="some_hint">
+    Type here to filter&#8230;
+  </string>
+  
+<string name="baseUrl">https://intc-premise.brivo.net</string>
+<string name="authorizerUrl">https://intc-premise.brivo.net/api/authenticate</string>
 
-	<string name="baseUrl" >https://pi.intb.brivo.net"</string>
-    <string name="p8ApiBasedAuthorizerUrl" >https://premisep8authorizer.azurewebsites.net/api/values"</string>
-    <string name="applicationId">0af9e058-0c70-4383-bc16-e5ae417396a9"</string>
-    <string name="actAsUserName">needforspeed"</string>
-    <string name="signAlgorithm">SHA256withRSA"</string>
-    <string name="privateKey" >-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAvM+W/XEjktwWbhkBWE9izlPP7VEo6SOJrdq9sTlSK5aXr20a
-wHF8X2WOoHCOMTsbZKm/BuU/1oujgmcq+JPEWhhe9H99I9fgCMyhLZr1UhzMRZFt
-jxxMBfjOsmdVH3sWuHGMnydfO3TFaXBs4S5xvLkuwUEQFHxmMqzcgO9eltv6S4Ue
-d2WhbjGNBnLISUeaZR8wcR8zqGFxIzFD8mMcAiJtUdSn6DeG7LEjibDbih1/y1rQ
-9cgtSbFlDOzRqUynQXPA6qeNncHUzUHEoNmN+F+dgGC3LrjRaEs8zmcgoc+AVMZh
-jGyYhUymFpWUeItGj3m6w7TvGf/RC48OtYi2VQIDAQABAoIBAQCU5FscV3kHGdny
-TnO6EThInt1MNwE9AJJU8DdAp4Q97U6Gv1ImShgbHnof2UK4XfUXJ6kFpgj2hj2V
-2weO6PAhYDCZPGQRvO3l4oCD9zvX2e/YOHueLGFjIDbXhxcgcS+Uma6b3y+BMm9u
-24Jw/PAiNCJDsawdi5AIDDsCzkDYUxjUlTsgN6LLpoIZbCyespjnffQmxaxoHZo2
-fiXt007JTrw9K0c5TesxT2X51LYyeKdE7CYOEogFErpWFv2AHsny948+ss3rLnvY
-T0LwljILpPaYC/21xpmxl7rxwY70EPp4xpkKLKGeVjtrg1y57i3iYquTtuyPWAQ9
-rdKYJBwtAoGBAPqAi0YcNxvcTM9nkhPsryDYYutKQ8OaSc/sSgN6BggyNBMV448Z
-E3Uu+V57tbDl4u7xxgBAqCLgpXfIPCwTDjEYYsgVwnkF7tkgrWIIOOeM/XUDbaxs
-fy5ydWh2hUoPr5zfXfAefphlGYgQZBMfYSXkzgGIJK1xNNovwTMvZYo/AoGBAMD0
-bmMBolk64mirRmEPVx2lzjz0hVxIKCIQQnKu/oH9NUYCdtQfG+I7NLv9F2LlqOpZ
-6eGXwM9Sig9Qe4w29nFbVN9/kjiFRsFeMMZR8iVzrOywl1/Zt8d3ZBrsPGdfUTUe
-Ie5yMj2NyTGP2eq7V7ro6czyD79VFhm6QQYywJJrAoGAWjHgc80C9rAao+8JxMzK
-vcvLyiZCQfKSsx/EAn50H41b/Kc7+TExNVdFiISIhfov/JLnFP4yy+QREBDzwXbW
-/ExofNyA2iyNtHY0l4CYZJ76P6CNY7DpFiM2LPfHxEPjmls+qo+AS4TTbY9hSRVa
-WFeK6ThI5H5HZmwdZz2glOcCgYBnXksIpSZ5EO+bzS2d757m1h1/UCtlfY5qeTVv
-xMm5j5GLmORZzPSeJMOidfqiU5BDQ7nkzexP5NLrU11sh0FNBvWX6frGZre5/aC5
-jcrgP3EDN7NQeQ1YQWCSf734TvrtLuBUoj7B9QQ0lfDTLFvaWM5vqbm/8XAuhjYx
-gNzjUwKBgAqXvLaOecod/HtmU/LkuJ3IeTaC+yxbX3EDvrPgW5n9yic7fCE7Kgib
-lPxqzfhUFoiHUiYP096ib+7+aNncK5NzEZwxEKx17gOhJtKkncau8w3aSMmF4pv+
-FajlRQKdtAIv/EkaX1VElwelnIWm+YwCIoPVTtp7Ni8R6ouXnWwe
------END RSA PRIVATE KEY-----"</string>
-    <string name="baseUrl" >https://pi.intb.brivo.net"</string>
 </resources>
