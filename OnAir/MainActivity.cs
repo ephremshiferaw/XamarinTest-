@@ -1,15 +1,19 @@
 ﻿using System;
+
 using Android.App;
 using Android.Content;
-using Android.OS;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
+using Android.OS;
+
 
 namespace OnAir
 {
-	[Activity (Label = "OnAir", Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	[Activity (Label = "OnAir", MainLauncher = true, Icon = "@drawable/icon")]
+	public class MainActivity : Android.App.Activity
 	{
-		
+		int count = 1;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -22,7 +26,7 @@ namespace OnAir
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			var myUsers = FindViewById<Button> (Resource.Id.myUsers);
+			Button myUsers = FindViewById<Button> (Resource.Id.myUsers);
 			Button myDoors = FindViewById<Button> (Resource.Id.myDoors);
 
 		
@@ -42,36 +46,6 @@ namespace OnAir
 			//source.Text = string.Format ("{0} clicks!", count++);
 		}
 
-        private void CreateAndShowDialog(Exception exception, String title)
-        {
-            CreateAndShowDialog(exception.Message, title);
-        }
-
-        private void CreateAndShowDialog(string message, string title)
-        {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-            builder.SetMessage(message);
-            builder.SetTitle(title);
-            builder.Create().Show();
-        }
-
-        //private MobileServiceUser user;
-        ////Mobile Service Client reference
-        //private MobileServiceClient client;
-
-        //private async Task Authenticate()
-        //{
-        //    try
-        //    {
-        //        user = await client.LoginAsync(this, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
-        //        CreateAndShowDialog(string.Format("you are now logged in - {0}", user.UserId), "Logged in!");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        CreateAndShowDialog(ex, "Authentication failed");
-        //    }
-        //}
 
 
 
